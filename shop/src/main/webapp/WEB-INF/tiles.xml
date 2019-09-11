@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/views/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/tiles/sidebar.jsp" />
+		<put-attribute name="main_content" value="" />
+	</definition>
+	<definition name="category" extends="base.definition">
+		<put-attribute name="title" value="Category"/>
+		<put-attribute name="sidebar" value="/WEB-INF/views/tiles/sidebar.jsp"/>
+	</definition>
+	<definition name="home" extends="base.definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="main_content" value="/WEB-INF/views/home/home.jsp" />
+	</definition>
+	<definition name="registration" extends="base.definition">
+		<put-attribute name="title" value="Registration" />
+		<put-attribute name="main_content"
+			value="/WEB-INF/views/registration/registration.jsp" />
+	</definition>
+	<definition name="product" extends="base.definition">
+		<put-attribute name="title" value="Products" />
+		<put-attribute name="main_content" value="/WEB-INF/views/product/product.jsp" />
+	</definition>
+	<definition name="phone" extends="base.definition">
+		<put-attribute name="title" value="Phone" />
+		<put-attribute name="main_content" value="/WEB-INF/views/product/phone.jsp" />
+	</definition>
+	<definition name="admin" extends="base.definition">
+		<put-attribute name="title" value="Admin" />
+		<put-attribute name="main_content" value="/WEB-INF/views/administrator/admin.jsp" />
+	</definition>
+
+</tiles-definitions>
